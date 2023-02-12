@@ -7,4 +7,5 @@ Currently functionality is very based.
 ### Roadmap
 
  * Create machine or function/task based package lists in separate files (i.e. system-ace.txt or function-general.txt)
- * Separate out into sub-scripts to clean up code, make it all more readable, etc. 
+ * Separate out into sub-scripts to clean up code, make it all more readable, etc.
+ * Ensure UbuProv can be run fully unattended (currently certain packages have human interaction dialogs). 
