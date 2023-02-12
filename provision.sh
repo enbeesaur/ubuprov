@@ -19,6 +19,7 @@ then
 fi
 
 sudo lvm lvextend -l +100%FREE /dev/${VG}/root -y
+sudo resize2fs /dev/${VG}/root -y
 
 ## Add nvidia stuff to kernel options.
 echo -e "${TXTBPINK}Add NVIDIA stuff to kernel options, then update GRUB..."
