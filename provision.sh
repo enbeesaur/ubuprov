@@ -82,9 +82,18 @@ sudo apt install opera-stable
 ## Add repo for Prism Launcher and Discord; install packages.
 echo -e "${TXTBIPINK}Adding repo for Prism Launcher and Discord, and installing packages...${TXTNC}"
 curl -q 'https://proget.makedeb.org/debian-feeds/prebuilt-mpr.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg 1> /dev/null
-echo "deb [signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/prebuilt-mpr-archive-keyring.gpg] https://proget.makedeb.org prebuilt-mpr $(lsb_release -cs)" | sudo tee /etc/apt/sources.list.d/prebuilt-mpr.list
 sudo apt update
 sudo apt install discord prismlauncher -y
+
+## Add makedeb.
+wget -qO - 'https://proget.makedeb.org/debian-feeds/makedeb.pub' | gpg --dearmor | sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg 1> /dev/null
+echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.makedeb.org/ makedeb main' | sudo tee /etc/apt/sources.list.d/makedeb.list
+sudo apt update
+
+## Add Una.
+sudo mkdir -p /etc/una/config
+bash <(curl -fsL https://github.com/AFK-OS/una/raw/main/install.sh)
 
 ## Install Element (matrix.org client).
 echo -e "${TXTBPINK}Adding Element repo and installing the Element client...${TXTNC}"
