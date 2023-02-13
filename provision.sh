@@ -117,6 +117,7 @@ sudo chown -R root:root /root/.zshrc
 
 ## Cleanup, remove unnecessary packages, like postfix
 sudo apt --purge remove postfix
+sudo apt --purge autoremove
 
 ## Time to reboot!
 shutdown -r now
