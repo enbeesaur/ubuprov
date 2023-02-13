@@ -52,6 +52,9 @@ sudo chown -R root:root /etc/udev/rules.d/*
 echo -e "${TXTBIPINK}Adding graphics-drivers PPA...\n${TXTNC}"
 sudo add-apt-repository ppa:graphics-drivers/ppa -y && sudo apt dist-upgrade -y
 
+## Add OpenRGB PPA.
+sudo add-apt-repository ppa:thopiekar/openrgb -y && sudo apt install openrgb -y
+
 ## Install lowlatency kernel.
 echo -e "${TXTBIPINK}Installing lowlatency kernel...\n${TXTNC}"
 sudo apt install linux-image-lowlatency linux-modules-nvidia-525-lowlatency -y
