@@ -90,6 +90,9 @@ echo "deb [signed-by=/usr/share/keyrings/element-io-archive-keyring.gpg] https:/
 sudo apt update
 sudo apt install element-desktop
 
+## Install Pacstall.
+sudo bash -c "$(curl -fsSL https://git.io/JsADh || wget -q https://git.io/JsADh -O -)"
+
 ## Set shells to zsh.
 echo -e "${TXTBIPINK}Setting shell to zsh for root and $USER...${TXTNC}"
 sudo usermod -s /bin/zsh root && sudo usermod -s /bin/zsh $USER
