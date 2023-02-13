@@ -109,5 +109,8 @@ echo 'eval "$(starship init zsh)"' >> ~/.zshrc
 sudo cp /home/${USER}/.zshrc /root
 sudo chown -R root:root /root/.zshrc
 
+## Cleanup, remove unnecessary packages, like postfix
+sudo apt --purge remove postfix
+
 ## Time to reboot!
 shutdown -r now

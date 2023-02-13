@@ -52,6 +52,7 @@ icc-profiles-free
 fontforge
 vim-nox
 vim-airline
+vim-scripts
 tmux
 tmux-themepack-jimeh
 tmuxinator
@@ -59,7 +60,6 @@ tmux-plugin-manager
 powerline
 powerline-gitstatus
 fonts-powerline
-terminus
 xfonts-terminus
 fonts-terminus-otb
 ttf-mscorefonts-installer
@@ -124,7 +124,6 @@ fonts-ebgaramond
 fonts-elstob
 fonts-eurofurence
 fonts-fantasque-sans
-
 fonts-femkeklaver
 handbrake
 libbluray-bdj
@@ -134,3 +133,9 @@ default-jre
 openjdk-20-jre
 openjdk-19-jre
 kgpg
+pgpgpg
+signing-party
+parcimonie
+pius
+gpgv2
+add-apt-key
